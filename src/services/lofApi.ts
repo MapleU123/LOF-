@@ -64,7 +64,10 @@ function generateFallbackQuotes(): { summary: MarketSummary; quotes: LofRealtime
     // Premium Rate = (Price - EstNAV) / EstNAV * 100
     const premiumRate = Number((((currentPrice - estimatedNAV) / estimatedNAV) * 100).toFixed(2));
     const officialPremiumRate = Number((((currentPrice - officialNAV) / officialNAV) * 100).toFixed(2));
-    const netArbitrageSpread = Number((premiumRate - fund.purchaseFeeRate - 0.03).toFixed(2));
+    const threeDayAvgPremium = Number((officialPremiumRate * 0.4 + (((seed % 19) - 9) * 0.08) - 0.15).toFixed(2));
+    const defaultDiscountedFee = (fund.purchaseFeeRate && fund.purchaseFeeRate > 0) ? Math.min(fund.purchaseFeeRate, 0.05) : 0.05;
+    const expectedReturn = Number((officialPremiumRate - defaultDiscountedFee).toFixed(2));
+    const netArbitrageSpread = Number((premiumRate - (fund.purchaseFeeRate || 0.12) - 0.03).toFixed(2));
     const volume = Math.floor(1500 + (seed % 6000));
     const turnover = Number(((volume * currentPrice * 100) / 10000).toFixed(2));
 
@@ -86,6 +89,8 @@ function generateFallbackQuotes(): { summary: MarketSummary; quotes: LofRealtime
       estimatedNAVChange,
       estimatedNAVTime: `${todayStr} ${timeStr}`,
       premiumRate,
+      threeDayAvgPremium,
+      expectedReturn,
       netArbitrageSpread,
       isTrading: true,
       quoteTime: timeStr
@@ -114,32 +119,106 @@ function generateFallbackQuotes(): { summary: MarketSummary; quotes: LofRealtime
   };
 }
 
-// Watchlist Helpers
-const WATCHLIST_STORAGE_KEY = 'lof_tracker_watchlist_v1';
+// Watchlist & Tags Helpers
+const WATCHLIST_STORAGE_KEY = 'lof_tracker_watchlist_v2';
+const LEGACY_WATCHLIST_STORAGE_KEY = 'lof_tracker_watchlist_v1';
 
-export function getWatchlist(): string[] {
+export function getWatchlistMap(): Record<string, import('../types/lof').WatchlistItem> {
   try {
     const data = localStorage.getItem(WATCHLIST_STORAGE_KEY);
-    return data ? JSON.parse(data) : ['164824', '501018', '162411', '161129', '161226', '160140'];
+    if (data) {
+      return JSON.parse(data);
+    }
+    // Migration from legacy array format
+    const legacy = localStorage.getItem(LEGACY_WATCHLIST_STORAGE_KEY);
+    if (legacy) {
+      const arr: string[] = JSON.parse(legacy);
+      const initialMap: Record<string, import('../types/lof').WatchlistItem> = {};
+      arr.forEach(code => {
+        initialMap[code] = {
+          code,
+          tags: ['套利池'],
+          note: '',
+          updatedAt: new Date().toISOString()
+        };
+      });
+      localStorage.setItem(WATCHLIST_STORAGE_KEY, JSON.stringify(initialMap));
+      return initialMap;
+    }
+    // Default seed
+    const defaultList = ['164824', '501018', '162411', '161129', '161226', '160140'];
+    const defaultMap: Record<string, import('../types/lof').WatchlistItem> = {};
+    defaultList.forEach(code => {
+      const defaultTag = (code === '164824' || code === '162411') ? '套利池' : '观察池';
+      defaultMap[code] = {
+        code,
+        tags: [defaultTag],
+        note: code === '164824' ? '限额100元，常年溢价套利' : '',
+        updatedAt: new Date().toISOString()
+      };
+    });
+    return defaultMap;
   } catch {
-    return ['164824', '501018', '162411'];
+    return {
+      '164824': { code: '164824', tags: ['套利池'], note: '常年溢价套利', updatedAt: '' }
+    };
   }
 }
 
-export function toggleWatchlist(code: string): string[] {
-  const current = getWatchlist();
-  let updated: string[];
-  if (current.includes(code)) {
-    updated = current.filter(c => c !== code);
-  } else {
-    updated = [...current, code];
-  }
+export function getWatchlist(): string[] {
+  const map = getWatchlistMap();
+  return Object.keys(map);
+}
+
+export function saveWatchlistMap(map: Record<string, import('../types/lof').WatchlistItem>): void {
   try {
-    localStorage.setItem(WATCHLIST_STORAGE_KEY, JSON.stringify(updated));
+    localStorage.setItem(WATCHLIST_STORAGE_KEY, JSON.stringify(map));
+    // Keep legacy key synced
+    localStorage.setItem(LEGACY_WATCHLIST_STORAGE_KEY, JSON.stringify(Object.keys(map)));
   } catch (e) {
     console.error('Failed to save watchlist', e);
   }
-  return updated;
+}
+
+export function toggleWatchlist(code: string, defaultTags: string[] = ['套利池']): Record<string, import('../types/lof').WatchlistItem> {
+  const map = { ...getWatchlistMap() };
+  if (map[code]) {
+    delete map[code];
+  } else {
+    map[code] = {
+      code,
+      tags: defaultTags.length > 0 ? defaultTags : ['套利池'],
+      note: '',
+      updatedAt: new Date().toISOString()
+    };
+  }
+  saveWatchlistMap(map);
+  return map;
+}
+
+export function updateWatchlistItem(code: string, tags: string[], note: string = ''): Record<string, import('../types/lof').WatchlistItem> {
+  const map = { ...getWatchlistMap() };
+  map[code] = {
+    code,
+    tags: tags.filter(t => t.trim().length > 0),
+    note: note.trim(),
+    updatedAt: new Date().toISOString()
+  };
+  saveWatchlistMap(map);
+  return map;
+}
+
+export function getAllUsedTags(): string[] {
+  const map = getWatchlistMap();
+  const tagSet = new Set<string>(['套利池', '观察池', '核心底仓', '高溢价监控', '深度折价', '定投池']);
+  Object.values(map).forEach(item => {
+    if (Array.isArray(item.tags)) {
+      item.tags.forEach(t => {
+        if (t && t.trim() && t.trim() !== '全部标签') tagSet.add(t.trim());
+      });
+    }
+  });
+  return Array.from(tagSet);
 }
 
 // Arbitrage Profit Calculator

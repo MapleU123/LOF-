@@ -6,7 +6,15 @@ export type LofCategory =
   | '行业主题'
   | '宽基指数'
   | '债券固收'
-  | '主动权益';
+  | '债券REITs'
+  | '主动权益'
+  | '混合策略'
+  | '科技互联'
+  | '医药医疗'
+  | '消费白酒'
+  | '新能源'
+  | '红利价值'
+  | string;
 
 export type ArbitrageOpportunityType = 'all' | 'premium' | 'discount' | 'tractor' | 'high_volume' | 'watchlist';
 
@@ -25,8 +33,26 @@ export interface LofFundBase {
   tractorAllowed: boolean;    // 是否支持拖拉机 (深圳市场可单账户挂6个股东号)
   settlementDays: string;     // 套利周期，如 "T+2可卖", "T+3可卖"
   pinyin: string;             // 拼音简写，如 "ydjj", "sfyy"
+  fundScale?: number;         // 基金规模 (亿元)
   description?: string;       // 基金特征说明
 }
+
+export interface WatchlistItem {
+  code: string;
+  tags: string[];      // e.g. ['套利池', '观察池']
+  note?: string;       // Custom user note e.g. '每天限额100，套利收益高'
+  updatedAt?: string;
+}
+
+export const PRESET_WATCHLIST_TAGS = [
+  '套利池',
+  '观察池',
+  '核心底仓',
+  '高溢价监控',
+  '深度折价',
+  '定投池',
+  '大宗商品'
+] as const;
 
 export interface LofRealtimeQuote extends LofFundBase {
   currentPrice: number;          // 场内最新价
@@ -47,12 +73,17 @@ export interface LofRealtimeQuote extends LofFundBase {
   estimatedNAVChange: number;   // 预估净值涨跌幅 (%)
   estimatedNAVTime: string;     // 估值更新时间
   
-  premiumRate: number;          // 实时溢价率 (%) = (现价 - 实时估值) / 实时估值 * 100
+  premiumRate: number;          // 实时估算溢价率 (%) = (现价 - 实时估值) / 实时估值 * 100
+  threeDayAvgPremium: number;   // 三日平均溢价率 (%)
+  expectedReturn: number;       // 预计收益率 (%) = 静态溢价率 - 申购费率 (通常0.05%~0.12%)
   netArbitrageSpread: number;   // 扣除申购/交易费率后的净溢价空间 (%)
   
   isTrading: boolean;           // 是否正在交易
   quoteTime: string;            // 行情时间
   isCustomAlert?: boolean;      // 是否触发自定义预警
+  
+  // Custom user tags & note for this fund
+  watchlistInfo?: WatchlistItem;
 }
 
 export interface MarketSummary {

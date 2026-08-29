@@ -15,7 +15,10 @@ import {
   Tractor,
   ExternalLink,
   Clock,
-  ArrowRight
+  ArrowRight,
+  CheckSquare,
+  Square,
+  Image as ImageIcon
 } from 'lucide-react';
 import {
   ResponsiveContainer,
@@ -35,13 +38,19 @@ interface LofDetailModalProps {
   onClose: () => void;
   isCnColorMode: boolean;
   onOpenFullCalculator: (fund: LofRealtimeQuote) => void;
+  isSelected?: boolean;
+  onToggleSelect?: (code: string) => void;
+  onExportSingleImage?: (fund: LofRealtimeQuote) => void;
 }
 
 export const LofDetailModal: React.FC<LofDetailModalProps> = ({
   fund,
   onClose,
   isCnColorMode,
-  onOpenFullCalculator
+  onOpenFullCalculator,
+  isSelected = false,
+  onToggleSelect,
+  onExportSingleImage
 }) => {
   const [historyData, setHistoryData] = useState<HistoricalPremiumPoint[]>([]);
   const [loadingHistory, setLoadingHistory] = useState(false);
@@ -101,16 +110,46 @@ export const LofDetailModal: React.FC<LofDetailModalProps> = ({
             </div>
           </div>
 
-          <button
-            onClick={onClose}
-            className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-200/60 transition-colors"
-          >
-            <X className="w-5 h-5" />
-          </button>
+          <div className="flex items-center gap-2">
+            {onToggleSelect && (
+              <button
+                type="button"
+                onClick={() => onToggleSelect(fund.code)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer border ${
+                  isSelected
+                    ? 'bg-indigo-600 text-white border-indigo-600 shadow-xs'
+                    : 'bg-white text-slate-700 hover:bg-slate-100 border-slate-300'
+                }`}
+                title={isSelected ? '已勾选用于导出' : '勾选此基金用于导出长图'}
+              >
+                {isSelected ? <CheckSquare className="w-3.5 h-3.5" /> : <Square className="w-3.5 h-3.5 text-slate-400" />}
+                <span>{isSelected ? '已勾选' : '勾选导出'}</span>
+              </button>
+            )}
+
+            {onExportSingleImage && (
+              <button
+                type="button"
+                onClick={() => onExportSingleImage(fund)}
+                className="px-3 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold border border-indigo-200 rounded-lg text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
+                title="为此基金生成海报长图"
+              >
+                <ImageIcon className="w-3.5 h-3.5" />
+                <span>生成海报</span>
+              </button>
+            )}
+
+            <button
+              onClick={onClose}
+              className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-200/60 transition-colors cursor-pointer"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
         {/* Real-time Metric Banner */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 px-6 py-3.5 bg-slate-50/40 border-b border-slate-200 text-xs">
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 px-6 py-3.5 bg-slate-50/40 border-b border-slate-200 text-xs">
           <div>
             <span className="text-slate-500">场内现价</span>
             <div className="text-lg font-mono font-bold text-slate-900">
@@ -119,35 +158,47 @@ export const LofDetailModal: React.FC<LofDetailModalProps> = ({
                 {fund.changePercent >= 0 ? `+${fund.changePercent.toFixed(2)}` : fund.changePercent.toFixed(2)}%
               </span>
             </div>
+            <span className="text-[10px] text-slate-400">成交: {fund.turnover <= 0 ? '无成交' : `${fund.turnover.toFixed(1)}万`}</span>
           </div>
 
           <div>
-            <span className="text-slate-500">实时预估净值 (GSZ)</span>
+            <span className="text-slate-500">官方公布净值 (T-1)</span>
+            <div className="text-lg font-mono font-bold text-slate-900">
+              {fund.officialNAV.toFixed(4)}
+            </div>
+            <span className="text-[10px] text-slate-400 font-sans">{fund.officialNAVDate}</span>
+          </div>
+
+          <div>
+            <span className="text-slate-500">实时估值 (GSZ)</span>
             <div className="text-lg font-mono font-bold text-slate-900">
               {fund.estimatedNAV.toFixed(4)}
-              <span className={`text-xs ml-1.5 font-normal ${fund.estimatedNAVChange >= 0 ? 'text-rose-600' : 'text-emerald-600'}`}>
+              <span className={`text-xs ml-1 font-normal ${fund.estimatedNAVChange >= 0 ? 'text-rose-600' : 'text-emerald-600'}`}>
                 {fund.estimatedNAVChange >= 0 ? `+${fund.estimatedNAVChange.toFixed(2)}` : fund.estimatedNAVChange.toFixed(2)}%
               </span>
             </div>
+            <span className="text-[10px] text-slate-400">{fund.estimatedNAVTime.includes(' ') ? fund.estimatedNAVTime.split(' ')[1] : '盘中'}</span>
           </div>
 
-          <div>
-            <span className="text-slate-500">实时折溢价率</span>
-            <div className={`text-lg font-mono font-extrabold ${fund.premiumRate >= 0 ? 'text-rose-600' : 'text-emerald-600'}`}>
-              {fund.premiumRate >= 0 ? `+${fund.premiumRate.toFixed(2)}` : fund.premiumRate.toFixed(2)}%
+          <div className="bg-blue-50/40 p-1.5 rounded-lg border border-blue-100">
+            <span className="text-blue-950 font-bold">静态/估算溢价率</span>
+            <div className="text-base font-mono font-black text-rose-600 mt-0.5">
+              {fund.officialPremiumRate >= 0 ? `+${fund.officialPremiumRate.toFixed(2)}` : fund.officialPremiumRate.toFixed(2)}%
+              <span className="text-slate-400 font-normal text-xs"> / </span>
+              <span className={fund.premiumRate >= 0 ? 'text-rose-600 text-sm' : 'text-emerald-600 text-sm'}>
+                {fund.premiumRate >= 0 ? `+${fund.premiumRate.toFixed(2)}` : fund.premiumRate.toFixed(2)}%
+              </span>
             </div>
+            <span className="text-[10px] text-slate-500">3日均溢: {fund.threeDayAvgPremium >= 0 ? `+${fund.threeDayAvgPremium.toFixed(2)}` : fund.threeDayAvgPremium.toFixed(2)}%</span>
           </div>
 
           <div>
-            <span className="text-slate-500">申购状态 / 限额</span>
-            <div className="text-sm font-semibold text-slate-800 mt-1">
-              {fund.purchaseDailyLimit > 0 ? (
-                <span className="text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
-                  单日限额 {fund.purchaseDailyLimit} 元
-                </span>
-              ) : (
-                <span>{fund.purchaseStatus}</span>
-              )}
+            <span className="text-slate-500">预计套利收益率</span>
+            <div className="text-lg font-mono font-extrabold text-amber-700">
+              {fund.expectedReturn >= 0 ? `+${fund.expectedReturn.toFixed(2)}` : fund.expectedReturn.toFixed(2)}%
+            </div>
+            <div className="text-[11px] text-slate-500 truncate">
+              {fund.purchaseDailyLimit > 0 ? `限额 ${fund.purchaseDailyLimit}元` : fund.purchaseStatus}
             </div>
           </div>
         </div>

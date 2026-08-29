@@ -16,10 +16,11 @@ import {
 
 interface ArbitrageGuideModalProps {
   onClose: () => void;
+  initialSection?: 'what_is_lof' | 'premium_arb' | 'tractor_guide' | 'risks' | 'formulas';
 }
 
-export const ArbitrageGuideModal: React.FC<ArbitrageGuideModalProps> = ({ onClose }) => {
-  const [activeSection, setActiveSection] = useState<'what_is_lof' | 'premium_arb' | 'tractor_guide' | 'risks'>('premium_arb');
+export const ArbitrageGuideModal: React.FC<ArbitrageGuideModalProps> = ({ onClose, initialSection = 'premium_arb' }) => {
+  const [activeSection, setActiveSection] = useState<'what_is_lof' | 'premium_arb' | 'tractor_guide' | 'risks' | 'formulas'>(initialSection);
 
   return (
     <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
@@ -96,7 +97,19 @@ export const ArbitrageGuideModal: React.FC<ArbitrageGuideModalProps> = ({ onClos
             }`}
           >
             <ShieldAlert className="w-3.5 h-3.5" />
-            <span>4. 核心风险与避坑秘籍</span>
+            <span>4. 核心风险与避坑</span>
+          </button>
+
+          <button
+            onClick={() => setActiveSection('formulas' as any)}
+            className={`py-3 px-4 text-xs font-semibold border-b-2 transition-colors flex items-center gap-1.5 whitespace-nowrap ${
+              (activeSection as any) === 'formulas'
+                ? 'border-indigo-600 text-indigo-600'
+                : 'border-transparent text-slate-500 hover:text-slate-900'
+            }`}
+          >
+            <Zap className="w-3.5 h-3.5 text-indigo-500" />
+            <span>5. 预估净值与溢价率计算公式</span>
           </button>
         </div>
 
@@ -285,6 +298,85 @@ export const ArbitrageGuideModal: React.FC<ArbitrageGuideModalProps> = ({ onClos
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+          )}
+
+          {/* Section 5: Formula Verification & Calculation Logic */}
+          {(activeSection as any) === 'formulas' && (
+            <div className="space-y-5">
+              <div className="bg-blue-50/70 p-4 rounded-xl border border-blue-200 text-blue-950">
+                <h4 className="font-bold text-sm text-blue-900 mb-1 flex items-center gap-1.5">
+                  <Zap className="w-4 h-4 text-blue-600" />
+                  LOF 预估净值 (IOPV) 与折溢价率权威核实公式
+                </h4>
+                <p className="text-slate-600 text-xs">
+                  本平台严格遵循沪深交易所基金估值指引与量化金融标准模型计算，支持盘中毫秒级实时联动。
+                </p>
+              </div>
+
+              {/* 1. Real-time Premium Rate Formula */}
+              <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-2">
+                <div className="font-bold text-slate-900 text-xs flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+                  1. 实时溢价率计算公式 (Real-time Premium Rate)
+                </div>
+                <div className="bg-slate-50 p-3 rounded-lg font-mono text-xs border border-slate-200 text-slate-800">
+                  实时溢价率 (%) = [ (场内最新成交价 - 预估实时净值 IOPV) ÷ 预估实时净值 IOPV ] × 100%
+                </div>
+                <ul className="text-[11px] text-slate-600 space-y-1 list-disc list-inside">
+                  <li><strong>正溢价 (&gt; 0%)</strong>：代表场内市价高于基金实际资产估值，溢价越大越适合【场外净值申购 → 场内卖出】套利。</li>
+                  <li><strong>折价 (&lt; 0%)</strong>：代表场内市价低于基金资产估值，折价越大越适合【场内折价买入 → 场外按净值赎回】套利。</li>
+                </ul>
+              </div>
+
+              {/* 2. Estimated NAV (IOPV) Calculation Formula */}
+              <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-2">
+                <div className="font-bold text-slate-900 text-xs flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-purple-600"></span>
+                  2. 预估实时净值 (IOPV / GSZ) 是怎么算的？
+                </div>
+                <div className="bg-slate-50 p-3 rounded-lg font-mono text-xs border border-slate-200 text-slate-800">
+                  预估实时净值 = T-1日官方基准公布净值 × [ 1 + (跟踪标的指数实时涨跌幅 × 估算仓位系数) ]
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-slate-600 mt-2">
+                  <div className="bg-slate-50/80 p-2.5 rounded-lg border border-slate-100">
+                    <strong className="text-slate-800 block mb-0.5">国内行业/宽基LOF：</strong>
+                    依据跟踪指数（如中证白酒、中证全指证券、中证煤炭）盘中每15秒动态点位与重仓股票计算。
+                  </div>
+                  <div className="bg-slate-50/80 p-2.5 rounded-lg border border-slate-100">
+                    <strong className="text-slate-800 block mb-0.5">QDII与原油商品LOF：</strong>
+                    结合标的现货/近月期货合约日内涨幅（如WTI原油、MSCI印度、标普500期指）与离岸人民币实时汇率波动换算。
+                  </div>
+                </div>
+              </div>
+
+              {/* 3. Static vs Realtime Premium */}
+              <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-2">
+                <div className="font-bold text-slate-900 text-xs flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
+                  3. 静态溢价率 vs 实时溢价率的区别
+                </div>
+                <div className="bg-slate-50 p-3 rounded-lg font-mono text-xs border border-slate-200 text-slate-800">
+                  官方静态溢价率 (%) = [ (场内最新成交价 - T-1日官方公布净值) ÷ T-1日官方公布净值 ] × 100%
+                </div>
+                <p className="text-[11px] text-slate-600">
+                  静态溢价率使用的是昨晚基金公司公布的滞后净值；而<strong>实时溢价率</strong>采用的是盘中跟随股市/海外市场实时波动的预估净值（IOPV），对于盘中套利决策<strong>必须以实时溢价率为准</strong>。
+                </p>
+              </div>
+
+              {/* 4. Net Arbitrage Spread */}
+              <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-2">
+                <div className="font-bold text-slate-900 text-xs flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-amber-600"></span>
+                  4. 净套利收益空间 (Net Spread)
+                </div>
+                <div className="bg-slate-50 p-3 rounded-lg font-mono text-xs border border-slate-200 text-slate-800">
+                  净套利空间 (%) = 实时溢价率 - 场外申购费率 (通常0.10%~0.15%) - 场内卖出交易佣金 (券商约0.03%)
+                </div>
+                <p className="text-[11px] text-slate-600">
+                  只有当<strong>净套利空间显著大于0（建议 &gt; 1.5%~2.0%）</strong>时，扣除所有摩擦成本后才有充足的安全边际对抗T+2到账期间的价格波动。
+                </p>
               </div>
             </div>
           )}

@@ -22,6 +22,7 @@ interface HeaderProps {
   isRefreshing: boolean;
   onOpenCalculator: () => void;
   onOpenGuide: () => void;
+  onOpenFormulaGuide?: () => void;
   onOpenTractorPanel: () => void;
   onOpenAlerts: () => void;
   searchQuery: string;
@@ -39,6 +40,7 @@ export const Header: React.FC<HeaderProps> = ({
   isRefreshing,
   onOpenCalculator,
   onOpenGuide,
+  onOpenFormulaGuide,
   onOpenTractorPanel,
   onOpenAlerts,
   searchQuery,
@@ -160,6 +162,16 @@ export const Header: React.FC<HeaderProps> = ({
               <BookOpen className="w-3.5 h-3.5 text-slate-600" />
               <span>套利指南</span>
             </button>
+
+            {onOpenFormulaGuide && (
+              <button
+                onClick={onOpenFormulaGuide}
+                className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-indigo-700 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200/80 rounded-lg transition-colors"
+                title="核实预估净值(IOPV)与折溢价率计算公式"
+              >
+                <span>📐 公式核实</span>
+              </button>
+            )}
 
             {/* Refresh Control */}
             <div className="flex items-center gap-1.5 bg-slate-50 border border-slate-200 rounded-lg p-1">
