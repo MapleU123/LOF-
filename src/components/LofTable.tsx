@@ -564,17 +564,30 @@ export const LofTable: React.FC<LofTableProps> = ({
                   {/* 1. 限购金额 Column */}
                   <td className="py-2.5 px-3 text-center whitespace-nowrap bg-amber-50/20 font-mono">
                     {fund.purchaseStatus === '暂停' ? (
-                      <span className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-500 border border-slate-200">
-                        暂停申购
+                      <span
+                        className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-rose-50 text-rose-700 border border-rose-200"
+                        title={`申购状态: 暂停申购${fund.purchaseDailyLimit > 0 ? ` (单日上限 ${fund.purchaseDailyLimit >= 10000 ? fund.purchaseDailyLimit / 10000 + '万' : fund.purchaseDailyLimit}元)` : ''}`}
+                      >
+                        {fund.purchaseDailyLimit > 0 ? (
+                          `暂停(限${fund.purchaseDailyLimit >= 10000 ? fund.purchaseDailyLimit / 10000 + '万' : fund.purchaseDailyLimit + '元'})`
+                        ) : (
+                          '暂停申购'
+                        )}
                       </span>
                     ) : fund.purchaseDailyLimit > 0 ? (
-                      <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-amber-50 text-amber-800 border border-amber-200 shadow-2xs">
+                      <span
+                        className="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-amber-50 text-amber-800 border border-amber-200 shadow-2xs"
+                        title={`申购状态: ${fund.purchaseStatus} (单日限额 ${fund.purchaseDailyLimit.toLocaleString()}元)`}
+                      >
                         {fund.purchaseDailyLimit >= 10000 
                           ? `${fund.purchaseDailyLimit / 10000}万/天` 
                           : `${fund.purchaseDailyLimit.toLocaleString()}元/天`}
                       </span>
                     ) : (
-                      <span className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      <span
+                        className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200"
+                        title="申购状态: 开放申购 (无大额申购限制)"
+                      >
                         不限额
                       </span>
                     )}

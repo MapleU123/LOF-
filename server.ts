@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'path';
+import fs from 'fs';
 import { createServer as createViteServer } from 'vite';
 import { ALL_LOF_FUNDS } from './src/data/lofDatabase';
 import { LofRealtimeQuote, MarketSummary, HistoricalPremiumPoint } from './src/types/lof';
@@ -8,6 +9,17 @@ import { LofRealtimeQuote, MarketSummary, HistoricalPremiumPoint } from './src/t
 let cachedQuotes: LofRealtimeQuote[] = [];
 let lastCacheTime = 0;
 const CACHE_TTL_MS = 2500; // 2.5 seconds cache for high responsiveness
+
+// Load latest fund limits metadata from JSON cache
+let fundLimitsMap: Record<string, any> = {};
+try {
+  const limitsFilePath = path.join(process.cwd(), 'src/data/fundLimitsData.json');
+  if (fs.existsSync(limitsFilePath)) {
+    fundLimitsMap = JSON.parse(fs.readFileSync(limitsFilePath, 'utf-8'));
+  }
+} catch (e) {
+  // Silent fallback
+}
 
 // Check A-share market status
 function getMarketStatus(): { status: 'trading' | 'midday' | 'closed' | 'pre_market'; text: string } {
@@ -244,17 +256,17 @@ async function fetchLiveSinaValuations(fundCodes: string[]): Promise<Map<string,
             const fields = match[2].split(',');
             if (fields.length >= 7) {
               const baseEst = parseFloat(fields[2]) || 0; // 实时估值 GSZ
-              const yesterdayNAV = parseFloat(fields[3]) || 0; // 昨单位净值
-              const deepEst = fields.length >= 9 ? (parseFloat(fields[8]) || 0) : 0; // 盘后/重仓股模型估算
+              const yesterdayNAV = parseFloat(fields[3]) || 0; // 上一天的净值 (T-1单位净值)
+              let estimatedNAVChange = parseFloat(fields[6]) || 0; // 今日估算涨跌幅 (%)
               
-              // 估算净值: 优先采用盘后/结算前深度重仓模型拟合估值 (如 4.2458 / 3.2911)，盘中采用实时GSZ估值
-              const estimatedNAV = deepEst > 0 
-                ? deepEst 
-                : (baseEst > 0 ? baseEst : yesterdayNAV);
+              if (estimatedNAVChange === 0 && baseEst > 0 && yesterdayNAV > 0) {
+                estimatedNAVChange = Number((((baseEst - yesterdayNAV) / yesterdayNAV) * 100).toFixed(4));
+              }
 
-              const estimatedNAVChange = yesterdayNAV > 0 
-                ? Number((((estimatedNAV - yesterdayNAV) / yesterdayNAV) * 100).toFixed(2))
-                : (parseFloat(fields[6]) || 0);
+              // 估算净值严格按: 今日估算涨跌幅 × 上一天的净值
+              const estimatedNAV = yesterdayNAV > 0
+                ? Number((yesterdayNAV * (1 + estimatedNAVChange / 100)).toFixed(4))
+                : (baseEst > 0 ? baseEst : yesterdayNAV);
 
               const valDate = fields[7] || '';
               const valTime = fields[1] || '';
@@ -304,6 +316,14 @@ async function generateAllQuotes(): Promise<LofRealtimeQuote[]> {
     const val = liveValuationMap.get(fund.code);
     const base = getBasePrice(fund.code);
 
+    // Merge latest verified fund limits and purchase status from database/cache
+    const limitInfo = fundLimitsMap[fund.code];
+    const purchaseStatus = limitInfo?.purchaseStatus || fund.purchaseStatus || '开放';
+    const purchaseDailyLimit = limitInfo?.purchaseDailyLimit !== undefined ? limitInfo.purchaseDailyLimit : fund.purchaseDailyLimit;
+    const redemptionStatus = limitInfo?.redemptionStatus || fund.redemptionStatus || '开放';
+    const purchaseFeeRate = limitInfo?.purchaseFeeRate || fund.purchaseFeeRate || 0.12;
+    const tractorAllowed = fund.market === 'sz' && purchaseStatus !== '暂停' && (purchaseStatus === '开放' || purchaseDailyLimit > 0);
+
     // If no market quote is available (e.g. unlisted/suspended without market quotes)
     const hasLiveMarketQuote = live && (live.currentPrice > 0 || live.prevClose > 0);
     const navFallback = val && val.yesterdayNAV > 0 ? val.yesterdayNAV : base.nav;
@@ -317,29 +337,24 @@ async function generateAllQuotes(): Promise<LofRealtimeQuote[]> {
     const volume = hasLiveMarketQuote ? live.volume : 0;
     const turnover = hasLiveMarketQuote ? (live.turnover > 0 ? live.turnover : 0) : 0;
 
-    // Official T-1 NAV: Use live reported T-1 NAV from market data or Sina
-    const officialNAV = (live && live.officialNAV > 0)
-      ? live.officialNAV
-      : (val && val.yesterdayNAV > 0 ? val.yesterdayNAV : base.nav);
+    // Official T-1 NAV (上一天的官方公布单位净值)
+    const officialNAV = (val && val.yesterdayNAV > 0)
+      ? val.yesterdayNAV
+      : ((live && live.officialNAV > 0) ? live.officialNAV : base.nav);
     const officialNAVDate = val && val.valDate ? val.valDate : todayStr;
 
-    // Real-time estimated NAV (IOPV/GSZ):
-    // 1. Sina fu_ real-time estimate (GSZ)
-    // 2. Tencent parts[85] IOPV
-    // 3. Fallback to Official NAV
-    let estimatedNAV = officialNAV;
+    // Today's estimated change % (今日的估算涨跌幅)
     let estimatedNAVChange = 0;
-
-    if (val && val.estimatedNAV > 0) {
-      estimatedNAV = val.estimatedNAV;
+    if (val && typeof val.estimatedNAVChange === 'number') {
       estimatedNAVChange = val.estimatedNAVChange;
-    } else if (live && live.iopv > 0) {
-      estimatedNAV = live.iopv;
-      estimatedNAVChange = officialNAV > 0 ? Number((((estimatedNAV - officialNAV) / officialNAV) * 100).toFixed(2)) : 0;
-    } else {
-      estimatedNAV = officialNAV;
-      estimatedNAVChange = 0;
+    } else if (live && typeof live.changePercent === 'number') {
+      estimatedNAVChange = live.changePercent;
     }
+
+    // 估算净值 = 上一天的净值 × (1 + 今日的涨跌幅 / 100)
+    let estimatedNAV = officialNAV > 0 
+      ? Number((officialNAV * (1 + estimatedNAVChange / 100)).toFixed(4))
+      : (val && val.estimatedNAV > 0 ? val.estimatedNAV : officialNAV);
 
     // Standard LOF Arbitrage Formulas:
     // 1. Real-time Premium Rate % = ((CurrentTradedPrice - RealtimeEstimatedNAV) / RealtimeEstimatedNAV) * 100
@@ -356,12 +371,11 @@ async function generateAllQuotes(): Promise<LofRealtimeQuote[]> {
     const threeDayAvgPremium = Number((officialPremiumRate * 0.4 + (seed * 0.08) - 0.15).toFixed(2));
 
     // 4. Expected Return % (预计收益率: 静态溢价率 - 申购费率0.05% - 卖出佣金0.03%左右)
-    // As seen on professional tools: e.g. +3.84% - 0.05% = +3.79%
-    const defaultDiscountedFee = (fund.purchaseFeeRate && fund.purchaseFeeRate > 0) ? Math.min(fund.purchaseFeeRate, 0.05) : 0.05;
+    const defaultDiscountedFee = (purchaseFeeRate && purchaseFeeRate > 0) ? Math.min(purchaseFeeRate, 0.05) : 0.05;
     const expectedReturn = Number((officialPremiumRate - defaultDiscountedFee).toFixed(2));
 
     // 5. Net Arbitrage Spread % = Realtime Premium Rate - Purchase Fee Rate - Broker Commission (0.03%)
-    const netArbitrageSpread = Number((premiumRate - (fund.purchaseFeeRate || 0.12) - 0.03).toFixed(2));
+    const netArbitrageSpread = Number((premiumRate - (purchaseFeeRate || 0.12) - 0.03).toFixed(2));
 
     // 6. Fund Scale (亿元): Compute based on total circulating shares or deterministic baseline
     const totalShares = live?.totalShares || 0;
@@ -378,6 +392,11 @@ async function generateAllQuotes(): Promise<LofRealtimeQuote[]> {
     return {
       ...fund,
       name: displayName,
+      purchaseStatus,
+      purchaseDailyLimit,
+      redemptionStatus,
+      purchaseFeeRate,
+      tractorAllowed,
       currentPrice,
       changePercent,
       changeAmount,

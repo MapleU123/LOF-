@@ -110,16 +110,12 @@ export const ExportImageModal: React.FC<ExportImageModalProps> = ({
 
   // Current options object
   const currentOptions = useMemo<LofImageExportOptions>(() => {
-    const title = exportSource === 'selected' 
-      ? '精选 LOF 基金实时溢价套利行情表' 
-      : exportSource === 'filtered' 
-      ? '筛选 LOF 基金实时溢价套利行情表' 
-      : '全市场 LOF 基金实时溢价套利行情表';
+    const title = '精选LOF基金实时溢价率';
 
     return {
       theme,
       title,
-      subtitle: '实时追踪场内折溢价 · 监控场外申购限额与套利机会',
+      subtitle: '',
       watermark: watermarkPosition !== 'none',
       watermarkPosition,
       watermarkText: watermarkText.trim() || '公众号：我爱这young',
@@ -128,7 +124,7 @@ export const ExportImageModal: React.FC<ExportImageModalProps> = ({
       strategy: quickFilterLabel,
       tagFilter: selectedTagFilter
     };
-  }, [theme, watermarkPosition, watermarkText, exportSource, selectedCategory, quickFilterLabel, selectedTagFilter]);
+  }, [theme, watermarkPosition, watermarkText, selectedCategory, quickFilterLabel, selectedTagFilter]);
 
   // Generate Real-time HD Preview (Canvas to DataURL)
   useEffect(() => {

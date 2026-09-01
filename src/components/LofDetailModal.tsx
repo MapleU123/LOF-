@@ -472,6 +472,22 @@ export const LofDetailModal: React.FC<LofDetailModalProps> = ({
                     <span className="font-semibold text-slate-900">{fund.market === 'sz' ? '深圳证券交易所 (深市)' : '上海证券交易所 (沪市)'}</span>
                   </div>
                   <div className="flex justify-between py-1 border-b border-slate-100">
+                    <span className="text-slate-500">申购状态与限额</span>
+                    <span className="font-semibold text-slate-900">
+                      {fund.purchaseStatus === '暂停' ? (
+                        <span className="text-rose-600 font-bold">
+                          暂停申购{fund.purchaseDailyLimit > 0 ? ` (上限 ${fund.purchaseDailyLimit >= 10000 ? fund.purchaseDailyLimit / 10000 + '万' : fund.purchaseDailyLimit}元)` : ''}
+                        </span>
+                      ) : fund.purchaseDailyLimit > 0 ? (
+                        <span className="text-amber-700 font-bold">
+                          {fund.purchaseStatus} ({fund.purchaseDailyLimit >= 10000 ? fund.purchaseDailyLimit / 10000 + '万' : fund.purchaseDailyLimit + '元'}/天)
+                        </span>
+                      ) : (
+                        <span className="text-emerald-600 font-bold">开放申购 (不限额)</span>
+                      )}
+                    </span>
+                  </div>
+                  <div className="flex justify-between py-1 border-b border-slate-100">
                     <span className="text-slate-500">套利周期</span>
                     <span className="font-semibold text-slate-900">{fund.settlementDays}</span>
                   </div>

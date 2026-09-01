@@ -1,0 +1,2152 @@
+{
+  "160125": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.13,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160133": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160135": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.06,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160219": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160220": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160221": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160222": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160223": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160225": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160311": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160314": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160322": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160323": {
+    "purchaseStatus": "限大额",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 1000,
+    "purchaseDailyLimitDesc": "1000元/天",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "限大额(单日投资上限1000元)",
+    "rawSHZT": "开放赎回"
+  },
+  "160324": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160325": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160326": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160416": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 2,
+    "purchaseDailyLimitDesc": "2元/天",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "暂停申购(单日投资上限2元)",
+    "rawSHZT": "开放赎回"
+  },
+  "160421": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160505": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160512": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160513": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160515": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "暂停",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.06,
+    "rawSGZT": "暂停申购",
+    "rawSHZT": "暂停赎回"
+  },
+  "160607": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160722": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "160723": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 5,
+    "purchaseDailyLimitDesc": "5元/天",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "暂停申购(单日投资上限5元)",
+    "rawSHZT": "开放赎回"
+  },
+  "161010": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161014": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "暂停",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "暂停申购",
+    "rawSHZT": "暂停赎回"
+  },
+  "161015": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161035": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161036": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161037": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161038": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161039": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161040": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "暂停",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "暂停申购",
+    "rawSHZT": "暂停赎回"
+  },
+  "161115": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161116": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 10,
+    "purchaseDailyLimitDesc": "10元/天",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "暂停申购(单日投资上限10元)",
+    "rawSHZT": "开放赎回"
+  },
+  "161117": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "暂停",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.06,
+    "rawSGZT": "暂停申购",
+    "rawSHZT": "暂停赎回"
+  },
+  "161118": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161119": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161121": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161122": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161123": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161124": {
+    "purchaseStatus": "限大额",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 3000,
+    "purchaseDailyLimitDesc": "3000元/天",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "限大额(单日投资上限3000元)",
+    "rawSHZT": "开放赎回"
+  },
+  "161125": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 10,
+    "purchaseDailyLimitDesc": "10元/天",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "暂停申购(单日投资上限10元)",
+    "rawSHZT": "开放赎回"
+  },
+  "161126": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 10,
+    "purchaseDailyLimitDesc": "10元/天",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "暂停申购(单日投资上限10元)",
+    "rawSHZT": "开放赎回"
+  },
+  "161127": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 10,
+    "purchaseDailyLimitDesc": "10元/天",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "暂停申购(单日投资上限10元)",
+    "rawSHZT": "开放赎回"
+  },
+  "161131": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161226": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 100,
+    "purchaseDailyLimitDesc": "100元/天",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "暂停申购(单日投资上限100元)",
+    "rawSHZT": "开放赎回"
+  },
+  "161229": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161626": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161713": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161720": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161820": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161831": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161834": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161837": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "暂停",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "暂停申购",
+    "rawSHZT": "暂停赎回"
+  },
+  "161903": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "161908": {
+    "purchaseStatus": "限大额",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 10000000,
+    "purchaseDailyLimitDesc": "1000万/天",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "限大额(单日投资上限1000万元)",
+    "rawSHZT": "开放赎回"
+  },
+  "161912": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "暂停",
+    "purchaseDailyLimit": 1000,
+    "purchaseDailyLimitDesc": "1000元/天",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "暂停申购(单日投资上限1000元)",
+    "rawSHZT": "暂停赎回"
+  },
+  "161914": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "暂停",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "暂停申购",
+    "rawSHZT": "暂停赎回"
+  },
+  "162006": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "162105": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "162108": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "162207": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "162215": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "162216": {
+    "purchaseStatus": "限大额",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 1000000,
+    "purchaseDailyLimitDesc": "100万/天",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "限大额(单日投资上限100万元)",
+    "rawSHZT": "开放赎回"
+  },
+  "162307": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "162411": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 10,
+    "purchaseDailyLimitDesc": "10元/天",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "暂停申购(单日投资上限10元)",
+    "rawSHZT": "开放赎回"
+  },
+  "162412": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "162414": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "162415": {
+    "purchaseStatus": "限大额",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 1000,
+    "purchaseDailyLimitDesc": "1000元/天",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "限大额(单日投资上限1000元)",
+    "rawSHZT": "开放赎回"
+  },
+  "162509": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "162605": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "162607": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "162703": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "162711": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "162712": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "162715": {
+    "purchaseStatus": "限大额",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 50000000,
+    "purchaseDailyLimitDesc": "5000万/天",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.03,
+    "rawSGZT": "限大额(单日投资上限5000万元)",
+    "rawSHZT": "开放赎回"
+  },
+  "162719": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 10,
+    "purchaseDailyLimitDesc": "10元/天",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "暂停申购(单日投资上限10元)",
+    "rawSHZT": "开放赎回"
+  },
+  "162720": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "暂停",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "暂停申购",
+    "rawSHZT": "暂停赎回"
+  },
+  "162721": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "163001": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "163003": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "163005": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "163109": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "163110": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "163111": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "163113": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "163114": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "163115": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "163116": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "163118": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "163208": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 500,
+    "purchaseDailyLimitDesc": "500元/天",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "暂停申购(单日投资上限500元)",
+    "rawSHZT": "开放赎回"
+  },
+  "163402": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "163407": {
+    "purchaseStatus": "限大额",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 10000000,
+    "purchaseDailyLimitDesc": "1000万/天",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "限大额(单日投资上限1000万元)",
+    "rawSHZT": "开放赎回"
+  },
+  "163415": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "163417": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "163503": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "163801": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "164824": {
+    "purchaseStatus": "限大额",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 500000,
+    "purchaseDailyLimitDesc": "50万/天",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "限大额(单日投资上限50万元)",
+    "rawSHZT": "开放赎回"
+  },
+  "165508": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "165509": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "165511": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "165512": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "165513": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.16,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "165515": {
+    "purchaseStatus": "限大额",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 500000,
+    "purchaseDailyLimitDesc": "50万/天",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "限大额(单日投资上限50万元)",
+    "rawSHZT": "开放赎回"
+  },
+  "165516": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "165519": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "165528": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "166001": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "166006": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "166008": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "166009": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "166011": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "166016": {
+    "purchaseStatus": "限大额",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 50000000,
+    "purchaseDailyLimitDesc": "5000万/天",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "限大额(单日投资上限5000万元)",
+    "rawSHZT": "开放赎回"
+  },
+  "166023": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "166024": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "暂停",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "暂停申购",
+    "rawSHZT": "暂停赎回"
+  },
+  "166107": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "166401": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "167001": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "167002": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.05,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "167003": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "167301": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "167302": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "167501": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "168101": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "168102": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "168104": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "168301": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "168401": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "169103": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 1.5,
+    "rawSGZT": "暂停申购",
+    "rawSHZT": "开放赎回"
+  },
+  "169104": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "169105": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "169106": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "暂停",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.7,
+    "rawSGZT": "暂停申购",
+    "rawSHZT": "暂停赎回"
+  },
+  "169107": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 1.5,
+    "rawSGZT": "暂停申购",
+    "rawSHZT": "开放赎回"
+  },
+  "169201": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501001": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501006": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501008": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501009": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501010": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501011": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501012": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501016": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501017": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501018": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 1,
+    "purchaseDailyLimitDesc": "1元/天",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "暂停申购(单日投资上限1元)",
+    "rawSHZT": "开放赎回"
+  },
+  "501019": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501021": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501022": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501025": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501026": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501028": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501029": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501030": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501031": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501032": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501036": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501037": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501038": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "暂停",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "暂停申购",
+    "rawSHZT": "暂停赎回"
+  },
+  "501043": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501045": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501047": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501048": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501049": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 1.5,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501050": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501051": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501053": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "暂停",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 1,
+    "rawSGZT": "暂停申购",
+    "rawSHZT": "暂停赎回"
+  },
+  "501054": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 1.5,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501057": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501080": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501082": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501083": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 1.5,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501085": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 1.2,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501087": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501088": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "暂停",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "暂停申购",
+    "rawSHZT": "暂停赎回"
+  },
+  "501089": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501201": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501202": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501203": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "限大额",
+    "rawSHZT": "开放赎回"
+  },
+  "501206": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501207": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501208": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501209": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501210": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501211": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "暂停",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "暂停申购",
+    "rawSHZT": "暂停赎回"
+  },
+  "501212": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501213": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501216": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501227": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501300": {
+    "purchaseStatus": "限大额",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 50000000,
+    "purchaseDailyLimitDesc": "5000万/天",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.08,
+    "rawSGZT": "限大额(单日投资上限5000万元)",
+    "rawSHZT": "开放赎回"
+  },
+  "501301": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501302": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501303": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501305": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501306": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501307": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501310": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501311": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "501312": {
+    "purchaseStatus": "限大额",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 20,
+    "purchaseDailyLimitDesc": "20元/天",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "限大额(单日投资上限20元)",
+    "rawSHZT": "开放赎回"
+  },
+  "502000": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "502003": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "502006": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "502010": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.1,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "502013": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "502023": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "502048": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "502053": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.12,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "502056": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.05,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "506000": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "506001": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "506002": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "暂停",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "暂停申购",
+    "rawSHZT": "暂停赎回"
+  },
+  "506003": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "506005": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "暂停",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "暂停申购",
+    "rawSHZT": "暂停赎回"
+  },
+  "506006": {
+    "purchaseStatus": "开放",
+    "redemptionStatus": "开放",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "不限额",
+    "tractorAllowed": true,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "开放申购",
+    "rawSHZT": "开放赎回"
+  },
+  "506008": {
+    "purchaseStatus": "暂停",
+    "redemptionStatus": "暂停",
+    "purchaseDailyLimit": 0,
+    "purchaseDailyLimitDesc": "暂停申购",
+    "tractorAllowed": false,
+    "purchaseFeeRate": 0.15,
+    "rawSGZT": "暂停申购",
+    "rawSHZT": "暂停赎回"
+  }
+}

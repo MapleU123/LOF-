@@ -154,8 +154,8 @@ export async function generateLofTableCanvas(
 ): Promise<HTMLCanvasElement> {
   const {
     theme = 'dark',
-    title = 'LOF 基金实时溢价套利行情表',
-    subtitle = '实时追踪场内折溢价 · 监控场外申购限额与套利机会',
+    title = '精选LOF基金实时溢价率',
+    subtitle = '',
     watermark = true,
     watermarkPosition = 'full',
     watermarkText = '公众号：我爱这young',
@@ -173,7 +173,7 @@ export async function generateLofTableCanvas(
   const isFullWatermark = isWatermarkActive && watermarkPosition === 'full';
   const isBottomWatermark = isWatermarkActive;
 
-  // 1. 严格 9:16 标准小红书图文分辨率设计 (1080 × 1920)
+  // 1. 严格 9:16 标准分辨率设计 (1080 × 1920)
   const canvasWidth = 1080;
   const canvasHeight = 1920;
   const paddingX = 44;
@@ -200,9 +200,9 @@ export async function generateLofTableCanvas(
     drawWatermark(ctx, canvasWidth, canvasHeight, theme, watermarkText);
   }
 
-  // 2. 顶部小红书笔记风格头部
+  // 2. 顶部头部卡片 (已按要求去除小红书徽标行以及实时追踪副标题行，聚焦纯粹大标题与更新时间)
   const headerCardY = 36;
-  const headerCardHeight = 156;
+  const headerCardHeight = 88;
 
   // 头部卡片背景
   const headerGrad = ctx.createLinearGradient(paddingX, headerCardY, paddingX + contentWidth, headerCardY + headerCardHeight);
@@ -210,52 +210,22 @@ export async function generateLofTableCanvas(
   headerGrad.addColorStop(1, colors.headerGradientEnd);
   drawRoundRect(ctx, paddingX, headerCardY, contentWidth, headerCardHeight, 16, headerGrad, colors.border, 1.5);
 
-  // 头部小红书分类徽标
-  const topTagX = paddingX + 24;
-  const topTagY = headerCardY + 20;
-  const tagText = '📌 小红书 · LOF 基金套利实盘监测';
-  ctx.font = `bold 12px ${fontRegular}`;
-  const tagW = ctx.measureText(tagText).width + 20;
-  const tagH = 24;
-  drawRoundRect(
-    ctx,
-    topTagX,
-    topTagY,
-    tagW,
-    tagH,
-    12,
-    isDark ? 'rgba(244, 63, 94, 0.18)' : 'rgba(225, 29, 72, 0.1)',
-    isDark ? 'rgba(244, 63, 94, 0.4)' : 'rgba(225, 29, 72, 0.3)',
-    1
-  );
-  ctx.fillStyle = isDark ? '#fb7185' : '#e11d48';
-  ctx.textAlign = 'center';
+  // 主标题 (居中对齐卡片高度，纯粹突出：精选LOF基金实时溢价率)
+  ctx.textAlign = 'left';
   ctx.textBaseline = 'middle';
-  ctx.fillText(tagText, topTagX + tagW / 2, topTagY + tagH / 2);
+  ctx.fillStyle = colors.text;
+  ctx.font = `bold 30px ${fontRegular}`;
+  ctx.fillText('精选LOF基金实时溢价率', paddingX + 28, headerCardY + headerCardHeight / 2);
 
-  // 右上角更新时间
+  // 右侧更新时间
   const now = new Date();
   const dateStr = now.toLocaleDateString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/\//g, '-');
   const timeStr = now.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
   ctx.textAlign = 'right';
-  ctx.font = `12px ${fontMono}`;
+  ctx.textBaseline = 'middle';
+  ctx.font = `13px ${fontMono}`;
   ctx.fillStyle = colors.textMuted;
-  ctx.fillText(`更新: ${dateStr} ${timeStr}`, paddingX + contentWidth - 24, topTagY + tagH / 2);
-
-  // 主标题
-  ctx.textAlign = 'left';
-  ctx.fillStyle = colors.text;
-  ctx.font = `bold 26px ${fontRegular}`;
-  ctx.fillText(title, paddingX + 24, headerCardY + 76);
-
-  // 副标题及筛选标签
-  ctx.fillStyle = colors.textSecondary;
-  ctx.font = `13px ${fontRegular}`;
-  let subText = subtitle;
-  if (category && category !== '全部') subText += ` ｜ 分类: ${category}`;
-  if (strategy) subText += ` ｜ 策略: ${strategy}`;
-  if (tagFilter && tagFilter !== '全部标签') subText += ` ｜ 标签: ${tagFilter}`;
-  ctx.fillText(subText, paddingX + 24, headerCardY + 116);
+  ctx.fillText(`更新: ${dateStr} ${timeStr}`, paddingX + contentWidth - 28, headerCardY + headerCardHeight / 2);
 
   // ⚠️ 注：按用户要求已彻底去除【标的总数那一行】(statsPills)，直接衔接套利逻辑卡片！
 
@@ -281,27 +251,27 @@ export async function generateLofTableCanvas(
 
   // 第一行：计算公式
   ctx.fillStyle = colors.accentGold;
-  ctx.font = `bold 13px ${fontRegular}`;
+  ctx.font = `bold 14px ${fontRegular}`;
   ctx.fillText('💡 溢价率公式:', paddingX + 20, formulaY + 26);
 
   ctx.fillStyle = colors.text;
-  ctx.font = `13px ${fontRegular}`;
-  let fX1 = paddingX + 116;
+  ctx.font = `14px ${fontRegular}`;
+  let fX1 = paddingX + 120;
   ctx.fillText('实时溢价率 = ', fX1, formulaY + 26);
   fX1 += ctx.measureText('实时溢价率 = ').width;
 
   ctx.fillStyle = colors.accentRose;
-  ctx.font = `bold 13px ${fontMono}`;
+  ctx.font = `bold 14px ${fontMono}`;
   ctx.fillText('(场内现价 - 预估净值) ÷ 预估净值 × 100%', fX1, formulaY + 26);
 
   // 第二行：实操流程
   ctx.fillStyle = colors.accentCyan;
-  ctx.font = `bold 13px ${fontRegular}`;
+  ctx.font = `bold 14px ${fontRegular}`;
   ctx.fillText('🚜 套利实操法:', paddingX + 20, formulaY + 58);
 
   ctx.fillStyle = colors.text;
-  ctx.font = `13px ${fontRegular}`;
-  let fX2 = paddingX + 116;
+  ctx.font = `14px ${fontRegular}`;
+  let fX2 = paddingX + 120;
   ctx.fillText('每日场外低成本申购限购份额 → T+2/3 场内高溢价挂单卖出套利', fX2, formulaY + 58);
 
   // 4. 表格区域设计 (适配 9:16 屏幕高度)
@@ -312,25 +282,25 @@ export async function generateLofTableCanvas(
 
   // 列定义 (针对 992px 总宽精确排版)
   const columns = [
-    { key: 'index', title: '序号', width: 56, align: 'center' },
-    { key: 'name', title: '基金名称', width: 300, align: 'left' },
-    { key: 'code', title: '基金代码', width: 146, align: 'left' },
-    { key: 'limit', title: '基金限购额度', width: 155, align: 'center' },
-    { key: 'priceNav', title: '现价 / 预估净值', width: 165, align: 'right' },
-    { key: 'premium', title: '实时溢价率', width: 170, align: 'right' },
+    { key: 'index', title: '序号', width: 54, align: 'center' },
+    { key: 'name', title: '基金名称', width: 304, align: 'left' },
+    { key: 'code', title: '基金代码', width: 148, align: 'left' },
+    { key: 'limit', title: '基金限购额度', width: 156, align: 'center' },
+    { key: 'priceNav', title: '现价 / 预估净值', width: 162, align: 'right' },
+    { key: 'premium', title: '实时溢价率', width: 168, align: 'right' },
   ];
 
-  const tableHeaderHeight = 46;
+  const tableHeaderHeight = 48;
 
   // 动态根据标的数量自适应计算行高，保证 9:16 页面充实且不超出
   const displayItems = items.length > 0 ? items : [];
-  const maxRowsFit = Math.min(displayItems.length, 22);
+  const maxRowsFit = Math.min(displayItems.length, 20);
   const effectiveItems = displayItems.slice(0, maxRowsFit);
 
-  let rowHeight = 62;
+  let rowHeight = 66;
   if (effectiveItems.length > 0) {
     const calculatedHeight = (tableContainerMaxHeight - tableHeaderHeight) / effectiveItems.length;
-    rowHeight = Math.max(48, Math.min(68, Math.floor(calculatedHeight)));
+    rowHeight = Math.max(54, Math.min(74, Math.floor(calculatedHeight)));
   }
 
   const tableTotalHeight = tableHeaderHeight + effectiveItems.length * rowHeight;
@@ -373,7 +343,7 @@ export async function generateLofTableCanvas(
   // 绘制表头文字
   let curHeaderX = paddingX;
   ctx.fillStyle = colors.textSecondary;
-  ctx.font = `bold 13px ${fontRegular}`;
+  ctx.font = `bold 14px ${fontRegular}`;
   ctx.textBaseline = 'middle';
 
   columns.forEach(col => {
@@ -404,15 +374,15 @@ export async function generateLofTableCanvas(
     // 1. 序号
     const colIdx = columns[0];
     ctx.textAlign = 'center';
-    ctx.font = `bold 12px ${fontMono}`;
+    ctx.font = `bold 14px ${fontMono}`;
     ctx.fillStyle = colors.textMuted;
     ctx.fillText(`${index + 1}`, cellX + colIdx.width / 2, curRowY + rowHeight / 2);
     cellX += colIdx.width;
 
-    // 2. 基金名称
+    // 2. 基金名称 (加大字号)
     const colName = columns[1];
     ctx.textAlign = 'left';
-    ctx.font = `bold 14px ${fontRegular}`;
+    ctx.font = `bold 16px ${fontRegular}`;
     ctx.fillStyle = colors.text;
 
     let displayName = item.name;
@@ -423,7 +393,7 @@ export async function generateLofTableCanvas(
     ctx.fillText(displayName, cellX + 12, curRowY + rowHeight * 0.36);
 
     // 分类 + 跟踪标的
-    ctx.font = `11px ${fontRegular}`;
+    ctx.font = `12px ${fontRegular}`;
     ctx.fillStyle = colors.textSecondary;
     const catLabel = item.category || 'LOF';
     const trackLabel = item.trackingTarget ? ` · ${item.trackingTarget}` : '';
@@ -434,46 +404,46 @@ export async function generateLofTableCanvas(
     ctx.fillText(subLabel, cellX + 12, curRowY + rowHeight * 0.70);
     cellX += colName.width;
 
-    // 3. 基金代码 (带 [深]/[沪] 徽标)
+    // 3. 基金代码 (加大字号，带 [深]/[沪] 徽标)
     const colCode = columns[2];
     const isSZ = item.market === 'sz';
     const tagX = cellX + 10;
-    const tagY = curRowY + (rowHeight - 20) / 2;
+    const tagY = curRowY + (rowHeight - 22) / 2;
     
     const tagFill = isSZ 
       ? (isDark ? 'rgba(168, 85, 247, 0.25)' : 'rgba(147, 51, 234, 0.12)')
       : (isDark ? 'rgba(59, 130, 246, 0.25)' : 'rgba(37, 99, 235, 0.12)');
     
-    drawRoundRect(ctx, tagX, tagY, 20, 20, 4, tagFill);
+    drawRoundRect(ctx, tagX, tagY, 22, 22, 5, tagFill);
 
     ctx.fillStyle = isSZ 
       ? (isDark ? '#c084fc' : '#7e22ce')
       : (isDark ? '#60a5fa' : '#1d4ed8');
-    ctx.font = `bold 11px ${fontRegular}`;
+    ctx.font = `bold 12px ${fontRegular}`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(isSZ ? '深' : '沪', tagX + 10, tagY + 10);
+    ctx.fillText(isSZ ? '深' : '沪', tagX + 11, tagY + 11);
 
     ctx.textAlign = 'left';
-    ctx.font = `bold 14px ${fontMono}`;
+    ctx.font = `bold 16px ${fontMono}`;
     ctx.fillStyle = colors.text;
-    ctx.fillText(item.code, tagX + 28, curRowY + rowHeight / 2);
+    ctx.fillText(item.code, tagX + 30, curRowY + rowHeight / 2);
     cellX += colCode.width;
 
-    // 4. 基金限购额度
+    // 4. 基金限购额度 (加大字号)
     const colLimit = columns[3];
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    const limitPillX = cellX + 14;
-    const limitPillW = colLimit.width - 28;
-    const limitPillH = 26;
+    const limitPillX = cellX + 12;
+    const limitPillW = colLimit.width - 24;
+    const limitPillH = 28;
     const limitPillY = curRowY + (rowHeight - limitPillH) / 2;
 
     if (item.purchaseStatus === '暂停') {
       const pFill = isDark ? 'rgba(100, 116, 139, 0.2)' : 'rgba(226, 232, 240, 0.8)';
       drawRoundRect(ctx, limitPillX, limitPillY, limitPillW, limitPillH, 6, pFill);
       ctx.fillStyle = colors.textMuted;
-      ctx.font = `bold 12px ${fontRegular}`;
+      ctx.font = `bold 13px ${fontRegular}`;
       ctx.fillText('暂停申购', cellX + colLimit.width / 2, curRowY + rowHeight / 2);
     } else if (item.purchaseDailyLimit > 0) {
       const limitStr = item.purchaseDailyLimit >= 10000 
@@ -491,30 +461,30 @@ export async function generateLofTableCanvas(
       
       drawRoundRect(ctx, limitPillX, limitPillY, limitPillW, limitPillH, 6, lFill, lStroke, 1);
       ctx.fillStyle = isDark ? '#fbbf24' : isWine ? '#fef08a' : '#92400e';
-      ctx.font = `bold 13px ${fontMono}`;
+      ctx.font = `bold 14px ${fontMono}`;
       ctx.fillText(limitStr, cellX + colLimit.width / 2, curRowY + rowHeight / 2);
     } else {
       const lFill = isDark ? 'rgba(16, 185, 129, 0.15)' : '#ecfdf5';
       drawRoundRect(ctx, limitPillX, limitPillY, limitPillW, limitPillH, 6, lFill);
       ctx.fillStyle = colors.accentGreen;
-      ctx.font = `bold 12px ${fontRegular}`;
+      ctx.font = `bold 13px ${fontRegular}`;
       ctx.fillText('无限额', cellX + colLimit.width / 2, curRowY + rowHeight / 2);
     }
     cellX += colLimit.width;
 
-    // 5. 现价 / 预估净值
+    // 5. 现价 / 预估净值 (加大字号)
     const colPriceNav = columns[4];
     ctx.textAlign = 'right';
-    ctx.font = `bold 13px ${fontMono}`;
+    ctx.font = `bold 15px ${fontMono}`;
     ctx.fillStyle = colors.text;
     ctx.fillText(`¥${item.currentPrice.toFixed(3)}`, cellX + colPriceNav.width - 16, curRowY + rowHeight * 0.36);
 
-    ctx.font = `12px ${fontMono}`;
+    ctx.font = `13px ${fontMono}`;
     ctx.fillStyle = colors.textSecondary;
     ctx.fillText(`净值 ¥${item.estimatedNAV.toFixed(3)}`, cellX + colPriceNav.width - 16, curRowY + rowHeight * 0.70);
     cellX += colPriceNav.width;
 
-    // 6. 实时溢价率
+    // 6. 实时溢价率 (加大药丸尺寸与字号)
     const colPrem = columns[5];
     const prem = item.premiumRate;
     const isHigh = prem >= 2.0;
@@ -522,8 +492,8 @@ export async function generateLofTableCanvas(
     const isUp = prem >= 0;
     const premText = isUp ? `+${prem.toFixed(2)}%` : `${prem.toFixed(2)}%`;
 
-    const premPillW = 96;
-    const premPillH = 28;
+    const premPillW = 104;
+    const premPillH = 30;
     const premPillX = cellX + colPrem.width - 16 - premPillW;
     const premPillY = curRowY + (rowHeight - premPillH) / 2;
 
@@ -547,7 +517,7 @@ export async function generateLofTableCanvas(
 
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.font = `bold 13px ${fontMono}`;
+    ctx.font = `bold 15px ${fontMono}`;
     ctx.fillText(premText, premPillX + premPillW / 2, premPillY + premPillH / 2);
 
     // 行底部分割线
@@ -592,14 +562,16 @@ export async function generateLofTableCanvas(
   ctx.textBaseline = 'top';
   ctx.fillText('⚠️ 声明：本图数据基于盘中实时估值与场内行情，仅供套利策略参考，不构成任何投资建议。', paddingX, footerY);
 
-  ctx.textAlign = 'right';
-  ctx.font = `bold 12px ${fontRegular}`;
-  ctx.fillStyle = colors.accentGold;
-  ctx.fillText(
-    isBottomWatermark ? `📕 小红书 / 微信公众号：${watermarkText}` : '📕 小红书 LOF 套利实盘日志',
-    paddingX + contentWidth,
-    footerY
-  );
+  if (isBottomWatermark) {
+    ctx.textAlign = 'right';
+    ctx.font = `bold 13px ${fontRegular}`;
+    ctx.fillStyle = colors.accentGold;
+    ctx.fillText(
+      watermarkText || '公众号：我爱这young',
+      paddingX + contentWidth,
+      footerY
+    );
+  }
 
   return canvas;
 }
